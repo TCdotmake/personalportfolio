@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Source+Code+Pro:wght@300&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -46,3 +48,83 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+nav{
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 2fr 4fr; 
+  font-size: 1.7rem;
+  background-color: rgb(70, 68, 82);
+  justify-items: center;
+  padding: .6em 0;
+}
+
+nav, nav a{
+  text-transform: uppercase;
+  color: azure;
+  font-family: 'Anton', sans-serif;
+}
+
+nav a{
+  margin: 0 .5em;;
+}
+
+nav h2{
+  display: block;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+a:visited{
+  text-decoration: none;
+}
+
+#welcome-section{
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(183, 186, 209);
+}
+
+#mainHeader{
+  width: 100vw;
+  text-align: center;
+}
+
+#welcome-section h1{
+  font-family: 'Anton', sans-serif;
+  font-size: 6rem;
+}
+
+#subheadingDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.subHeading{
+  margin: 0 .25em;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: rgb(177, 10, 43);
+}
+
+.subHeading:after{
+  content: '\00B7';
+  margin-left: .5em;
+}
+
+#lastsub:after{
+  content: '';
+}
+
+
+
+
+

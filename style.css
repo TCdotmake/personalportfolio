@@ -82,7 +82,6 @@ a:visited{
 }
 
 #welcome-section{
-
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -123,6 +122,51 @@ a:visited{
 #lastsub:after{
   content: '';
 }
+
+#projects h2{
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 3.5rem;
+  padding: 1.5em 0;
+}
+
+#tiles{
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.project-tile{
+  width: 450px;
+  height: 450px;
+  background-color: rgb(60, 125, 130);
+}
+
+.linkImage{
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.projectlink{
+  text-decoration: none;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 2.3rem;
+  text-align: center;
+  padding: 1em 0;
+  background-color: rgb(70, 68, 82);
+}
+
+.projectlink, .projectlink:visited{
+  color: azure;
+}
+
+
+
+
+
+
 
 
 

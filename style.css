@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,800;1,600&family=Source+Code+Pro:ital,wght@0,300;0,500;0,700;1,300;1,500&display=swap');
+
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -49,6 +50,10 @@ table {
 	border-spacing: 0;
 }
 
+:root{
+  --bigFont: 'Merriweather Sans', sans-serif;
+}
+
 nav{
   width: 100vw;
   display: grid;
@@ -60,16 +65,17 @@ nav{
 }
 
 nav, nav a{
-  text-transform: uppercase;
-  color: azure;
-  font-family: 'Anton', sans-serif;
+  text-transform: capitalize;
+  color: rgb(201, 213, 213);
+  font-family: var(--bigFont);
+  font-weight: 400;
 }
 
 nav a{
   margin: 0 .5em;;
 }
 
-nav h2{
+nav h3{
   display: block;
 }
 
@@ -97,8 +103,10 @@ a:visited{
 }
 
 #welcome-section h1{
-  font-family: 'Anton', sans-serif;
+  font-family: var(--bigFont);
   font-size: 6rem;
+  font-weight: 800;
+  color: rgb(53, 53, 53);
 }
 
 #subheadingDiv{
@@ -123,11 +131,24 @@ a:visited{
   content: '';
 }
 
-#projects h2{
+#projects{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(70, 68, 82);
+  padding-bottom: 4.5em;
+}
+
+h2{
   text-align: center;
-  font-family: 'Anton', sans-serif;
+  font-family: var(--bigFont);
+  font-weight: 600;
   font-size: 3.5rem;
-  padding: 1.5em 0;
+  text-transform: capitalize;
+  padding: 1.2em 0;
+}
+
+#projects h2{
+  color: rgb(201, 213, 213);
 }
 
 #tiles{
@@ -141,26 +162,100 @@ a:visited{
   width: 450px;
   height: 450px;
   background-color: rgb(60, 125, 130);
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
 }
 
 .linkImage{
+  display: block;
   width: 450px;
   height: 450px;
   object-fit: cover;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
 }
 
 .projectlink{
   text-decoration: none;
   font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
   font-size: 2.3rem;
   text-align: center;
-  padding: 1em 0;
-  background-color: rgb(70, 68, 82);
+  padding: 1.4em 0;
+  background-color: rgb(183, 186, 209);
 }
 
 .projectlink, .projectlink:visited{
-  color: azure;
+  color: rgb(53, 53, 53);
 }
+
+.projectlink p{
+  background-color: rgb(183, 186, 209);
+  padding: .5em 0;
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+  border-top: 1px solid rgb(177, 10, 43);
+}
+
+#codePenLink{
+  margin-top: 2.8em;
+  font-family: var(--bigFont);
+  font-weight: 600;
+  font-style: italic;
+  color: rgb(201, 213, 213);
+  text-align: center;
+  font-size: 2.8rem;
+}
+
+#codePenLink:visited{
+  color: rgb(201, 213, 213);
+}
+
+#links{
+background-color: rgb(183, 186, 209);
+}
+
+
+#contactLinks{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 500;
+}
+
+#links{
+  color: rgb(53, 53, 53);
+  text-align: center;
+  padding-bottom: 4em;
+}
+
+#email{
+  display: block;
+  font-family: 'Source Code Pro', monospace;
+  color: rgb(53, 53, 53);
+  padding: 4em 0 1em 0;
+}
+
+#contactLinks a{
+  font-size: 2rem;
+  color: rgb(53, 53, 53);
+  text-transform: uppercase;
+  padding-bottom: 1em;
+}
+
+.fab, .fas{
+  margin-right: .2em;
+}
+
+#contactLinks a{
+  display: flex;
+  flex-direction: row;
+  margin: 0 .6em;
+  word-spacing: -20%;
+}
+
+
 
 
 

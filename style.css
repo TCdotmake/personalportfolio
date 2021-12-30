@@ -54,6 +54,14 @@ table {
   --bigFont: 'Merriweather Sans', sans-serif;
 }
 
+html{
+  font-size: 16px;
+}
+
+body{
+  position: relative;
+}
+
 nav{
   width: 100vw;
   display: grid;
@@ -62,6 +70,9 @@ nav{
   background-color: rgb(70, 68, 82);
   justify-items: center;
   padding: .6em 0;
+  top: 0;
+  left: 0;
+  position: fixed;
 }
 
 nav, nav a{
@@ -72,7 +83,11 @@ nav, nav a{
 }
 
 nav a{
-  margin: 0 .5em;;
+  margin: 0 .5em;
+}
+
+nav a:hover{
+  text-decoration: underline;
 }
 
 nav h3{
@@ -151,6 +166,10 @@ h2{
   color: rgb(201, 213, 213);
 }
 
+.project-tile a:hover{
+  text-decoration: underline;
+}
+
 #tiles{
   width: 100vw;
   display: grid;
@@ -161,7 +180,7 @@ h2{
 .project-tile{
   width: 450px;
   height: 450px;
-  background-color: rgb(60, 125, 130);
+  background-color: rgb(70, 68, 82);
   border-top-left-radius: 2%;
   border-top-right-radius: 2%;
 }
@@ -201,7 +220,6 @@ h2{
   margin-top: 2.8em;
   font-family: var(--bigFont);
   font-weight: 600;
-  font-style: italic;
   color: rgb(201, 213, 213);
   text-align: center;
   font-size: 2.8rem;
@@ -209,6 +227,11 @@ h2{
 
 #codePenLink:visited{
   color: rgb(201, 213, 213);
+}
+
+#codePenLink:hover{
+  font-style: italic;
+
 }
 
 #links{
@@ -227,14 +250,14 @@ background-color: rgb(183, 186, 209);
 #links{
   color: rgb(53, 53, 53);
   text-align: center;
-  padding-bottom: 4em;
+  padding-bottom: 8em;
 }
 
 #email{
   display: block;
   font-family: 'Source Code Pro', monospace;
   color: rgb(53, 53, 53);
-  padding: 4em 0 1em 0;
+  padding: 4em 0 2em 0;
 }
 
 #contactLinks a{
@@ -255,7 +278,44 @@ background-color: rgb(183, 186, 209);
   word-spacing: -20%;
 }
 
+#contactLinks a:hover{
+  font-size: 2.8rem;
+}
 
+#email:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 450px) {
+  html{font-size: 8px;}
+  #tiles{
+    /* grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-tile{
+    width: 95vw;
+    height: 95vw;
+    padding-bottom: 15em;
+    }
+
+  img{
+    max-width: 100%;
+    height: 100%;
+  }
+
+  #lastTile{
+    padding-bottom: 8em;
+  }
+}
+
+/* @media (orientation: portrait) {
+  #welcome-section{
+    height: 100vw;
+  }
+} */
 
 
 

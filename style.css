@@ -52,6 +52,7 @@ table {
 
 :root{
   --bigFont: 'Merriweather Sans', sans-serif;
+  --tileWidth: 450px;
 }
 
 html{
@@ -150,7 +151,6 @@ a:visited{
   display: flex;
   flex-direction: column;
   background-color: rgb(70, 68, 82);
-  padding-bottom: 4.5em;
 }
 
 h2{
@@ -171,24 +171,35 @@ h2{
 }
 
 #tiles{
-  width: 100vw;
+  /* width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .project-tile{
-  width: 450px;
-  height: 450px;
-  background-color: rgb(70, 68, 82);
+  width: var(--tileWidth);
+  height: auto;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+  margin: 1em;
+}
+
+.imgDiv{
+  display: block;
+  width: var(--tileWidth);
+  height: var(--tileWidth);
   border-top-left-radius: 2%;
   border-top-right-radius: 2%;
 }
 
-.linkImage{
-  display: block;
-  width: 450px;
-  height: 450px;
+.imgDiv img{
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   border-top-left-radius: 2%;
   border-top-right-radius: 2%;
@@ -217,12 +228,13 @@ h2{
 }
 
 #codePenLink{
-  margin-top: 2.8em;
   font-family: var(--bigFont);
   font-weight: 600;
   color: rgb(201, 213, 213);
   text-align: center;
   font-size: 2.8rem;
+  padding-top: 1.5em;
+  padding-bottom: 2.4em;
 }
 
 #codePenLink:visited{
@@ -286,38 +298,39 @@ background-color: rgb(183, 186, 209);
   text-decoration: underline;
 }
 
-@media screen and (max-width: 450px) {
-  html{font-size: 8px;}
-  #tiles{
-    /* grid-template-columns: 1fr;
-    grid-template-rows: repeat(1fr); */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .project-tile{
-    width: 95vw;
-    height: 95vw;
-    padding-bottom: 15em;
+@media screen and (max-width: 991px) {
+  /* start of large tablet styles */
+    :root{
+      --tileWidth: 400px;
     }
-
-  img{
-    max-width: 100%;
-    height: 100%;
+    html{
+      font-size: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+  /* start of medium tablet styles */
+  :root{
+    --tileWidth: 350px;
+  }
+  html{
+    font-size: 10px;
+  }
+  }
+  
+  @media screen and (max-width: 479px) {
+  /* start of phone styles */
+  :root{
+    --tileWidth: 350px;
+  }
+  html{
+    font-size: 8px;
   }
 
-  #lastTile{
-    padding-bottom: 8em;
-  }
-}
-
-/* @media (orientation: portrait) {
   #welcome-section{
-    height: 100vw;
+    height: 60vh;
   }
-} */
-
-
+  }
 
 
 
